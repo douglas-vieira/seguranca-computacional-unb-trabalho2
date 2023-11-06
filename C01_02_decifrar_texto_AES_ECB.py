@@ -10,7 +10,7 @@ key        = b'1234567891234567'
 num_rounds = 10
 
 # Criptografar os dados usando o modo AES ECB
-texto = dec(key, texto)
+texto = dec(key, texto, num_rounds)
 
 # Salvar os bytes de-criptografados em um arquivo
 with open("04_03_texto_decifrado.txt", "wb") as arquivo:

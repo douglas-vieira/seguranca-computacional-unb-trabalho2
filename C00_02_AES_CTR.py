@@ -18,4 +18,3 @@ def enc_ctr(chave, dados, nonce, num_rounds):
 
 def dec_ctr(chave, dados_cifrados, nonce, num_rounds):
     return enc_ctr(chave, dados_cifrados, nonce, num_rounds)
-

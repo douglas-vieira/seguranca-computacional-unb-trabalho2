@@ -201,12 +201,12 @@ def enc(chave, dados, num_rodadas):
     return bytes(int_stream)
 
 # Função para realizar a decifragem AES no modo ECB
-def dec(chave, dados):
+def dec(chave, dados, num_rounds):
 
     blocos = quebrar_em_blocos_de_16(dados)
-    chave_expandida = expandir_chave(chave, 11)
+    chave_expandida = expandir_chave(chave, num_rounds + 1)
     blocos_temp = []
-    chave_rodada = extrair_subchave_para_rodada(chave_expandida, 10)
+    chave_rodada = extrair_subchave_para_rodada(chave_expandida, num_rounds)
 
     blocos_temp = []
 
